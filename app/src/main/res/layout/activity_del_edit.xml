@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <cn.guolf.androiddemo.widgets.EditTextWithDel
+        android:id="@+id/etTest"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_bg"
+        android:layout_height="wrap_content">
+    </cn.guolf.androiddemo.widgets.EditTextWithDel>
+</LinearLayout>
