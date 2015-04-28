@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+	 window.addEventListener("online", function () {
+	  alert('online');
+        document.querySelector("#msg").innerHTML= "True";
+    }, false);
+    window.addEventListener("offline", function () {
+		alert('offline');
+        document.querySelector("#msg").innerHTML= "False";
+    }, false);
+	function test(){
+		alert(navigator.onLine);		
+	}
+	
+</script>
+<a id="btn" href="javascript:test();">点击我</a>
+<div id="msg"></div>
+</body>
+</html>
