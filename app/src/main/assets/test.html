@@ -6,20 +6,32 @@
 </head>
 <body>
 <script type="text/javascript">
-	 window.addEventListener("online", function () {
-	  alert('online');
-        document.querySelector("#msg").innerHTML= "True";
-    }, false);
+
+    // 网络状态监听
+	window.addEventListener("online", function () {
+            alert('online');
+        }, false);
     window.addEventListener("offline", function () {
-		alert('offline');
-        document.querySelector("#msg").innerHTML= "False";
-    }, false);
-	function test(){
+		    alert('offline');
+        }, false);
+
+    // 网络状态（true or false）
+	function testNet(){
 		alert(navigator.onLine);		
 	}
-	
+
+	// 数据库测试
+	function testDB(){
+        try {
+            var db = openDatabase('testDB', '1.0', 'Test DB', 2 * 1024 * 1024);
+        }catch(e){
+            document.querySelector("#msg").innerHTML= e.message;
+        }
+        document.querySelector("#btn").style.background="#ff0000";
+    };
+
 </script>
-<a id="btn" href="javascript:test();">点击我</a>
+<a id="btn" href="javascript:testNet();">点击我</a>
 <div id="msg"></div>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>录音测试</title>
+</head>
+<body>
+<script type="text/javascript">
+    function start(){
+        window.control.start();
+    }
+    function stop(){
+        window.control.stop();
+    }
+    function player(){
+        window.control.player();
+    }
+    function test(){
+        alert(1);
+        var test =  window.control.test();
+        alert(test);
+    }
+
+</script>
+<a id="btnStart" href="javascript:start();">录音</a>
+<a id="btnStop" href="javascript:stop();">停止</a>
+<a id="btnPlaer" href="javascript:player();">播放</a>
+<a id="btnPlaer" href="javascript:test();">返回值测试</a>
+<div id="msg"></div>
+</body>
+</html>
