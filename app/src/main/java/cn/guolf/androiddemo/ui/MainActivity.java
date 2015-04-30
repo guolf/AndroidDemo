@@ -18,7 +18,21 @@ public class MainActivity extends ActionBarActivity {
         findViewById(R.id.btnAudio).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,AudioRecordActivity.class);
+                Intent i = new Intent(MainActivity.this, AudioRecordActivity.class);
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.btnCamera).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,CameraActivity.class);
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.btnMap).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,WebMapActivity.class);
                 startActivity(i);
             }
         });

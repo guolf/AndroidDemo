@@ -11,4 +11,16 @@
         android:text="@string/func_audio" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_below="@id/btnAudio"
+        android:text="@string/func_camera" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_below="@id/btnCamera"
+        android:text="@string/func_map" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
