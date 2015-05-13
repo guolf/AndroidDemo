@@ -34,7 +34,7 @@ public class WebMapActivity extends ActionBarActivity {
                 final boolean remember = false;
                 AlertDialog.Builder builder = new AlertDialog.Builder(
                         WebMapActivity.this);
-                builder.setTitle("¶¨Î»");
+                builder.setTitle("location");
                 builder.setMessage(
                         origin + " Allows to use your location")
                         .setCancelable(true)

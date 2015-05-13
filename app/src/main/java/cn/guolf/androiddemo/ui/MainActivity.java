@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.guolf.androiddemo.R;
+import cn.guolf.androiddemo.util.LogUtil;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -34,6 +35,24 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,WebMapActivity.class);
                 startActivity(i);
+            }
+        });
+        findViewById(R.id.btnAppWidget).setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction("com.guolf.androiddemo.update");
+                MainActivity.this.sendBroadcast(intent);
+                LogUtil.i("·¢ËÍ¹ã²¥");
+            }
+        });
+        findViewById(R.id.btnMockGps).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction("com.guolf.action.mockgps.start");
+                startService(intent);
             }
         });
     }

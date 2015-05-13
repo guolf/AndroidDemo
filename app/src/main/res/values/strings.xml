@@ -10,4 +10,8 @@
     <string name="func_map">地图Demo</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="title_activity_web_map">WebMapActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="func_appwidget">更新appwidget</string>
+    <string name="func_mockgps">模拟地址</string>
 </resources>

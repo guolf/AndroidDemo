@@ -3,6 +3,7 @@ package cn.guolf.androiddemo.appwidget;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
@@ -56,11 +57,16 @@ public class TestAppWidget extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        LogUtil.i("Ω” ’π„≤•£∫"+intent.getAction());
         if(intent.getAction()==update_action){
             LogUtil.i("update by Broadcast");
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.test_app_widget);
             views.setTextViewText(R.id.appwidget_text, "update by Broadcast");
+            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+            ComponentName componentName = new ComponentName(context,TestAppWidget.class);
+            int[] ids = appWidgetManager.getAppWidgetIds(componentName);
+            for(int i : ids){
+                appWidgetManager.updateAppWidget(i, views);
+            }
         }
     }
 

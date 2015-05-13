@@ -11,6 +11,9 @@
     <!-- 在SDCard中创建与删除文件权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
+
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -53,6 +56,26 @@
             android:name=".ui.WebMapActivity"
             android:label="@string/title_activity_web_map" >
         </activity>
+
+        <receiver android:name=".appwidget.TestAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.guolf.androiddemo.update" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/test_app_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".mockgps.MockGPSService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.guolf.action.mockgps.start"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

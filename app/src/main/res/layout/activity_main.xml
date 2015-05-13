@@ -23,4 +23,16 @@
         android:text="@string/func_map" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btnAppWidget"
+        android:layout_below="@id/btnMap"
+        android:text="@string/func_appwidget" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnMockGps"
+        android:layout_below="@id/btnAppWidget"
+        android:text="@string/func_mockgps" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
